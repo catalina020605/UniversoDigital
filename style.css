@@ -1,0 +1,346 @@
+body {
+    margin: 0;
+}
+
+.nav {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+
+.navbar {
+    display: flex;
+    background-color: #09222f;
+}
+
+.navlogo {
+    justify-self: start;
+    margin-left: 30px;
+    margin-top: 4vh;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #e5e5e5;
+}
+
+/*Buscador*/
+
+.group {
+    display: flex;
+    line-height: 10px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+    margin-left: 55%;
+    margin-right: 5%;
+}
+
+.input {
+    width: 140%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #09222f;
+    color: #9e9ea7;
+    transition: .3s ease;
+}
+
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+    outline: none;
+    border-color: rgba(76, 89, 234, 0.4);
+    background-color: #09222f;
+    box-shadow: 0 0 0 4px rgba(129, 76, 234, 0.1);
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+.carShop {
+    margin-right: 20px;
+    margin-top: 3.5vh;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('images/banner.jpg');
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.banner-container {
+    text-align: center;
+    padding: 15% 0;
+}
+
+.banner h1 {
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 62px;
+    font-weight: bold;
+}
+
+.banner p {
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/*Style cards*/
+
+.shop-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30px 80px 0 80px;
+}
+
+.card {
+    width: 20%;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    max-width: 100%;
+    height: 50%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.card .buy {
+    background-color: #09222f;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+.card .buy:hover {
+    background-color: #09222f;
+}
+
+/*carShop*/
+
+/* Estilos para el modal */
+.modalStyle {
+    width: 45%;
+    margin: 0 55%;
+    max-height: 88vh;
+    color: #000;
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow-y: auto;
+    z-index: 9;
+    top: 12vh;
+}
+
+.modal-car {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #09222f;
+    color: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.modal-close-button {
+    cursor: pointer;
+    margin-left: 90%;
+    top: 0;
+}
+
+
+.modal-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.modal-content img {
+    height: 120px;
+    width: 120px;
+}
+
+.total-content {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.delete-product {
+    cursor: pointer;
+}
+
+.quantity-Car {
+    display: none;
+    position: absolute;
+    top: 13px;
+    right: 35px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.sum, .rest{
+    cursor: pointer;
+}
+
+.carClear{
+    cursor: pointer;
+}
+
+#categoryFilter,
+#priceFilter {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    margin-left: 15%;
+    padding: 10px 15px;
+    border: 2px solid #09222f;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #09222f;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#categoryFilter:hover,
+#priceFilter:hover,
+#categoryFilter:focus,
+#priceFilter:focus {
+    background-color: #09222f;
+    color: #fff;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #09222f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 352px) and (max-width: 480px) {
+    .navlogo {
+        font-size: 1.2rem;
+        margin-left: 10px;
+    }
+
+    .group {
+        max-width: 160px;
+        margin-left: 40%;
+        margin-right: 2%;
+    }
+
+    .input {
+        width: 120%;
+    }
+
+    .carShop {
+        margin-right: 10px;
+        margin-top: 3vh;
+        width: 30px;
+        height: 30px;
+    }
+
+    .banner h1 {
+        font-size: 42px;
+    }
+
+    .banner p {
+        font-size: 20px;
+    }
+
+    .shop-cards {
+        margin: 20px 20px 0 20px;
+    }
+
+    .card {
+        width: calc(50% - 40px);
+        /* Restar el margen a la mitad del ancho deseado */
+        margin: 10px;
+    }
+
+    .modalStyle {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    #categoryFilter,
+    #priceFilter {
+        margin-left: 10%;
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+}

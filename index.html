@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Universe</title>
+</head>
+
+<body>
+    <div class="nav">
+        <nav class="navbar">
+            <h1 class="navlogo">UNIVERSO DIGITAL</h1>
+            <div class="group">
+                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                <input placeholder="Search" id="searcher" IDtype="search" class="input">
+              </div>
+            <img class="carShop" id="seeCar" src="images/carrito.png" alt="">
+            <span id="quantityCar" class="quantity-Car"></span>
+        </nav>
+    </div>
+
+    <div class="banner">
+        <div class="banner-container">
+            <h1>Universo Digital</h1>
+            <p>El mejor lugar para hacer tus compras en linea</p>
+        </div>
+    </div>
+
+    <select id="categoryFilter">
+        <option value="all">Todas las categorías</option>
+        <option value="Dispositivo de entretenimiento">Dispositivo de entretenimiento</option>
+        <option value="Dispositivos portátiles de audio">Dispositivos portátiles de audio</option>
+        <option value="Computadoras">Computadoras</option>
+        <option value="Dispositivos de fotografía y video">Dispositivos de fotografía y video</option>
+        <option value="Teléfonos móviles">Teléfonos móviles</option>
+    </select>
+
+    <select id="priceFilter">
+        <option value="ascending">Precio - Menor a Mayor</option>
+        <option value="descending">Precio - Mayor a Menor</option>
+    </select>
+
+    <div id="shopContent" class="shop-cards"></div>
+
+    <div id="modalContent" class="modalStyle"></div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Universo Digital. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="./js/products.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/car.js"></script>
+    <script src="./js/filterPrice.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/category.js"></script>
+
+
+</body>
+
+</html>
